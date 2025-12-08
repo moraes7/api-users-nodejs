@@ -47,10 +47,10 @@ app.put("/users/:id", async (req, res) => {
 });
 
 app.delete("/users/:id", async (req, res) => {
-  const { name, email, age } = req.body;
+  //const { name, email, age } = req.body;
 
   try {
-    const user = await prisma.user.delete({
+    await prisma.user.delete({
         where: {
             id: req.params.id
         },
